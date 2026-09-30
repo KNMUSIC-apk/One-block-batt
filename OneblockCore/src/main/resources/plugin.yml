@@ -1,0 +1,39 @@
+name: OneblockCore
+version: 1.0.0
+main: com.oneblock.core.OneblockCore
+api-version: '1.21'
+authors: [ YourName ]
+description: Core API & command layer for Oneblock Battle Royale
+load: STARTUP
+
+commands:
+  join:
+    description: Vào phòng chờ Oneblock Battle Royale
+    usage: /join
+    permission: oneblock.player.join
+  setjoin:
+    description: Đặt vị trí phòng chờ
+    usage: /setjoin
+    permission: oneblock.admin.setjoin
+  setlobby:
+    description: Đặt vị trí lobby an toàn
+    usage: /setlobby
+    permission: oneblock.admin.setlobby
+  start:
+    description: Bắt đầu trận ngay lập tức
+    usage: /start
+    permission: oneblock.admin.start
+  oneblock:
+    description: Lệnh quản trị hệ thống
+    usage: /oneblock <reload>
+    permission: oneblock.admin
+
+permissions:
+  oneblock.player.join:
+    default: true
+  oneblock.admin:
+    default: op
+    children:
+      oneblock.admin.setjoin: true
+      oneblock.admin.setlobby: true
+      oneblock.admin.start: true
