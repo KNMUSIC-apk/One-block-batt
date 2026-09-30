@@ -1,0 +1,38 @@
+# ============ OneblockCore ============
+game:
+  min-players: 2
+  max-players: 10
+  # Thời gian đếm ngược chờ đủ người (giây)
+  queue-countdown: 180
+  # Đếm ngược 3 giây trước khi thả người chơi
+  launch-countdown: 3
+  # Lưu & khôi phục túi đồ / máu / food khi vào – rời trận
+  save-player-state: true
+  clear-inventory-on-join: true
+
+locations:
+  lobby:
+    world: world
+    x: 0.5
+    y: 65.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+  join-spawn:
+    world: world
+    x: 0.5
+    y: 65.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+messages:
+  prefix: "&8[&6Oneblock&8] &r"
+  no-permission: "&cBạn không có quyền."
+  only-player: "&cChỉ người chơi mới dùng được lệnh này."
+  joined-queue: "&aBạn đã vào phòng chờ &7({current}/{max})"
+  left-queue: "&eBạn đã rời phòng chờ."
+  queue-full: "&cPhòng chờ đã đầy."
+  game-in-progress: "&cTrận đấu đang diễn ra, không thể tham gia."
+  not-enough-players: "&cCần tối thiểu {min} người chơi."
+  reloaded: "&aĐã tải lại toàn bộ cấu hình hệ thống."
