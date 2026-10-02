@@ -1,0 +1,49 @@
+# ============ OneblockArena ============
+world:
+  # Mỗi trận dùng 1 world void riêng -> reset map tức thì, không cần FAWE.
+  # Nếu muốn dùng FAWE/SlimeWorldManager, đặt use-static-world: true và cấu hình world-name.
+  use-static-world: false
+  world-name: "oneblock_arena"
+  world-prefix: "ob_match_"     # tên world động: ob_match_1, ob_match_2 ...
+  keep-world-folder: false      # xoá world sau khi trận kết thúc
+  time: 6000
+  disable-weather: true
+  disable-mob-spawning: true
+
+arena:
+  oneblock-y: 100
+  pad-radius-min: 15            # khoảng cách tối thiểu từ tâm đến pad người chơi
+  pad-radius-margin: 10         # radius = (borderSize/2) - margin
+  pad-base-material: BEDROCK    # nền dưới oneblock (không phá được)
+  pad-base-size: 1              # bán kính nền (1 = 3x3)
+  teleport-y-offset: 1.0
+
+border:
+  base-size: 50                 # 2 người = 50x50
+  per-player: 30                # mỗi người thêm +30
+  min-size: 10
+  shrink-interval-seconds: 45   # bao lâu thu 1 lần
+  shrink-step: 5                # mỗi lần thu bao nhiêu block
+  shrink-duration-seconds: 10   # thời gian chuyển mượt
+  damage-amount: 1.0
+  damage-buffer: 5.0
+  warning-distance: 5
+
+countdown:
+  queue-seconds: 180            # 3 phút chờ đủ người
+  launch-seconds: 3             # 3 giây trước khi thả
+  # Nếu hết 3 phút mà chưa đủ min-players -> huỷ
+  cancel-if-not-enough: true
+
+end:
+  delay-seconds: 5              # chờ trước khi teleport về lobby
+  restore-players: true
+
+messages:
+  broadcast-prefix: "&8[&6Oneblock&8] &r"
+  countdown: "&eTrận đấu bắt đầu sau &c{time}s&e..."
+  started: "&aTrận đấu bắt đầu! Chúc may mắn."
+  cancelled: "&cKhông đủ người chơi, huỷ trận."
+  eliminated: "&c{player} &7đã bị loại. &eCòn lại: &f{remaining}"
+  border-shrink: "&c⚠ Vòng bo đang thu hẹp! &7({from} → {to})"
+  winner: "&6🏆 &e{player} &6đã chiến thắng!"
