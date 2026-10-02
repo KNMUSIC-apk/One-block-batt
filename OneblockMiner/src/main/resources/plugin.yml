@@ -1,0 +1,7 @@
+name: OneblockMiner
+version: 1.0.0
+main: com.oneblock.miner.OneblockMiner
+api-version: '1.21'
+depend: [ OneblockCore ]
+softdepend: [ OneblockArena ]
+description: Oneblock cycle mining & loot chest system
