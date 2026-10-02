@@ -5,33 +5,22 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- ======================= PARENT ======================= -->
     <parent>
         <groupId>com.oneblock</groupId>
         <artifactId>oneblock-parent</artifactId>
         <version>1.0.0</version>
-        <!-- Trỏ lên pom.xml ở thư mục gốc (mặc định là ../pom.xml) -->
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <!-- ======================= MODULE ======================= -->
     <artifactId>OneblockArena</artifactId>
     <packaging>jar</packaging>
     <name>OneblockArena</name>
-    <description>Battle Royale arena logic (border, countdown, elimination, map reset)</description>
 
-    <!-- LƯU Ý: KHÔNG được khai báo <groupId> và <version> ở đây
-         vì đã kế thừa từ parent. Khai báo lại có thể gây duplicate. -->
-
-    <!-- ======================= DEPENDENCIES ======================= -->
     <dependencies>
-        <!-- Paper API (provided scope đã cấu hình trong parent dependencyManagement) -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
         </dependency>
-
-        <!-- Core module (compileOnly để không đóng gói chung vào jar Arena) -->
         <dependency>
             <groupId>com.oneblock</groupId>
             <artifactId>OneblockCore</artifactId>
@@ -39,16 +28,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <!-- ======================= BUILD ======================= -->
-    <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-    </build>
 
 </project>
