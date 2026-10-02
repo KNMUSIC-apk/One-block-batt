@@ -1,0 +1,79 @@
+# ============ OneblockMiner ============
+settings:
+  # Xác suất chọn block từ chu kỳ trước (giúp không bị thiếu tài nguyên cơ bản)
+  regression-chance: 0.15
+  # Nhân tỷ lệ rương (1.0 = giữ nguyên config)
+  chest-chance-multiplier: 1.0
+  # Thông báo khi đổi chu kỳ
+  announce-phase-change: true
+
+# Thứ tự chu kỳ. from-block / to-block tính theo TỔNG số block người chơi đã đào.
+phases:
+  1:
+    display-name: "&aĐồng cỏ"
+    from-block: 0
+    to-block: 50
+    chest-chance: 0.03
+    blocks:
+      GRASS_BLOCK: 30
+      DIRT: 25
+      OAK_LOG: 20
+      OAK_LEAVES: 15
+      COBBLESTONE: 10
+    loot:
+      OAK_LOG:     { min: 2, max: 6,  weight: 20 }
+      BREAD:       { min: 1, max: 3,  weight: 15 }
+      APPLE:       { min: 1, max: 2,  weight: 12 }
+      STONE:       { min: 4, max: 12, weight: 18 }
+      COAL:        { min: 1, max: 4,  weight: 15 }
+      WOODEN_SWORD:{ min: 1, max: 1,  weight: 8  }
+      LEATHER_CHESTPLATE: { min: 1, max: 1, weight: 6 }
+
+  2:
+    display-name: "&eHầm mỏ"
+    from-block: 51
+    to-block: 120
+    chest-chance: 0.04
+    blocks:
+      OAK_LOG: 18
+      STONE: 25
+      COAL_ORE: 15
+      IRON_ORE: 15
+      COPPER_ORE: 12
+      DEEPSLATE: 10
+      ANDESITE: 5
+    loot:
+      IRON_INGOT:  { min: 2, max: 5,  weight: 20 }
+      COAL:        { min: 4, max: 10, weight: 18 }
+      STONE:       { min: 8, max: 20, weight: 15 }
+      IRON_SWORD:  { min: 1, max: 1,  weight: 8  }
+      IRON_PICKAXE:{ min: 1, max: 1,  weight: 8  }
+      SHIELD:      { min: 1, max: 1,  weight: 6  }
+      GOLDEN_APPLE:{ min: 1, max: 1,  weight: 4  }
+      CHAINMAIL_CHESTPLATE: { min: 1, max: 1, weight: 5 }
+
+  3:
+    display-name: "&cVực thẳm"
+    from-block: 121
+    to-block: -1        # -1 = vô hạn
+    chest-chance: 0.05
+    blocks:
+      DEEPSLATE: 20
+      DIAMOND_ORE: 12
+      ANCIENT_DEBRIS: 6
+      OBSIDIAN: 15
+      NETHERITE_SCRAP: 3
+      COBBLED_DEEPSLATE: 20
+      REDSTONE_ORE: 12
+      LAPIS_ORE: 12
+    loot:
+      DIAMOND:          { min: 1, max: 3, weight: 20 }
+      NETHERITE_SCRAP:  { min: 1, max: 2, weight: 8  }
+      OBSIDIAN:         { min: 4, max: 10, weight: 15 }
+      DIAMOND_SWORD:    { min: 1, max: 1, weight: 8  }
+      DIAMOND_CHESTPLATE:{ min: 1, max: 1, weight: 6 }
+      GOLDEN_APPLE:     { min: 2, max: 4, weight: 12 }
+      ENCHANTED_GOLDEN_APPLE: { min: 1, max: 1, weight: 3 }
+      ENDER_PEARL:      { min: 1, max: 3, weight: 10 }
+      TOTEM_OF_UNDYING: { min: 1, max: 1, weight: 1  }
+      NETHERITE_INGOT:  { min: 1, max: 1, weight: 1  }
