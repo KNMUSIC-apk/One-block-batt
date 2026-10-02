@@ -1,0 +1,7 @@
+name: OneblockArena
+version: 1.0.0
+main: com.oneblock.arena.OneblockArena
+api-version: '1.21'
+depend: [ OneblockCore ]
+softdepend: [ OneblockMiner, OneblockVisuals ]
+description: Battle Royale arena logic (border, countdown, elimination, map reset)
