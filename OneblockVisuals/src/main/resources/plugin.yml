@@ -1,0 +1,7 @@
+name: OneblockVisuals
+version: 1.0.0
+main: com.oneblock.visuals.OneblockVisuals
+api-version: '1.21'
+depend: [ OneblockCore ]
+softdepend: [ OneblockArena, OneblockMiner ]
+description: Sound, Title, ActionBar, Scoreboard & Tablist
