@@ -1,0 +1,86 @@
+# ============ OneblockVisuals ============
+scoreboard:
+  enabled: true
+  update-ticks: 10
+  title: "&6&lONEBLOCK &e&lBATTLE"
+  lines:
+    - "&7&m--------------------"
+    - "&fTrạng thái: &a{state}"
+    - "&fNgười sống: &c{alive}&7/&c{total}"
+    - "&fVòng bo: &b{border}&7 block"
+    - "&fThu bo sau: &e{shrink}"
+    - ""
+    - "&fChu kỳ: {phase_name}"
+    - "&fĐã đào: &a{mined} &7block"
+    - "&7&m--------------------"
+    - "&e{website}"
+
+tablist:
+  enabled: true
+  header:
+    - "&6&lONEBLOCK BATTLE ROYALE"
+    - "&7Người sống: &c{alive}&7/&c{total}"
+  footer:
+    - ""
+    - "&fChu kỳ của bạn: {phase_name}"
+    - "&fĐã đào: &a{mined}"
+
+titles:
+  countdown-queue:
+    title: "&e{time}"
+    subtitle: "&7Trận đấu sắp bắt đầu"
+    fadeIn: 0
+    stay: 25
+    fadeOut: 5
+  countdown-launch:
+    title: "&c&l{time}"
+    subtitle: "&7Chuẩn bị chiến đấu!"
+    fadeIn: 0
+    stay: 25
+    fadeOut: 5
+  game-start:
+    title: "&a&lBẮT ĐẦU!"
+    subtitle: "&7Chúc may mắn"
+    fadeIn: 5
+    stay: 30
+    fadeOut: 10
+  eliminated:
+    title: "&c&lBẠN ĐÃ BỊ LOẠI"
+    subtitle: "&7Bạn giờ là khán giả"
+    fadeIn: 5
+    stay: 40
+    fadeOut: 10
+  border-shrink:
+    title: "&c&lVÒNG BO THU HẸP"
+    subtitle: "&7Còn lại: &e{size} &7block"
+    fadeIn: 5
+    stay: 30
+    fadeOut: 10
+  victory:
+    title: "&6&lCHIẾN THẮNG!"
+    subtitle: "&e{player}"
+    fadeIn: 5
+    stay: 60
+    fadeOut: 15
+
+actionbar:
+  playing: "&fChu kỳ &e{phase_name} &7| &fĐã đào &a{mined} &7| &fBo &b{border}"
+  spectator: "&7Bạn đang ở chế độ khán giả — &e{alive} &7người còn sống"
+
+sounds:
+  countdown-tick: BLOCK_NOTE_BLOCK_HAT
+  countdown-tick-pitch: 1.2
+  game-start: ENTITY_ENDER_DRAGON_GROWL
+  game-start-pitch: 1.0
+  player-eliminated: ENTITY_LIGHTNING_BOLT_THUNDER
+  player-eliminated-pitch: 1.0
+  border-shrink: BLOCK_BEACON_ACTIVATE
+  border-shrink-pitch: 0.8
+  chest-spawn: BLOCK_CHEST_OPEN
+  chest-spawn-pitch: 1.0
+  phase-change: ENTITY_PLAYER_LEVELUP
+  phase-change-pitch: 1.2
+  victory: UI_TOAST_CHALLENGE_COMPLETE
+  victory-pitch: 1.0
+
+website: "&7Oneblock BR v1.0"
