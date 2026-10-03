@@ -41,4 +41,6 @@ public final class OneblockArena extends JavaPlugin implements Listener {
     public void onReload(OneblockReloadEvent e) {
         reloadConfig();
         this.borderConfig = BorderConfig.from(getConfig());
-        arenaManager.getBorderManager().setConfig(b
+        arenaManager.getBorderManager().setConfig(this.borderConfig);
+    }
+}
