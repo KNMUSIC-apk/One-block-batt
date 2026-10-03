@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>OneblockCore</module>
         <module>OneblockArena</module>
         <module>OneblockMiner</module>
         <module>OneblockVisuals</module>
@@ -35,6 +36,12 @@
                 <groupId>io.papermc.paper</groupId>
                 <artifactId>paper-api</artifactId>
                 <version>${paper.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.oneblock</groupId>
+                <artifactId>OneblockCore</artifactId>
+                <version>${project.version}</version>
                 <scope>provided</scope>
             </dependency>
         </dependencies>
